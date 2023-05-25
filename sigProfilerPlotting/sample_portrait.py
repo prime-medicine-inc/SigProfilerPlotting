@@ -889,9 +889,9 @@ def samplePortrait (sample_matrices_path, output_path, project, percentage=False
 			panel3.set_xlabel('')
 
 			if percentage:
-				panel3.set_ylabel("Percentage of Single Base Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
+				panel3.set_ylabel("Percentage of Single Base \n Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
 			else:
-				panel3.set_ylabel("Number of Single Base Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
+				panel3.set_ylabel("Number of Single Base \n Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
 
 
 			panel3.tick_params(axis='both',which='both',\
@@ -987,9 +987,9 @@ def samplePortrait (sample_matrices_path, output_path, project, percentage=False
 
 
 			if percentage:
-				panel1.set_xlabel("Percentage of Single Base Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
+				panel1.set_xlabel("Percentage of Single Base \n Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
 			else:
-				panel1.set_xlabel("Number of Single Base Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
+				panel1.set_xlabel("Number of Single Base \n Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
 
 			panel1.set_ylabel('')
 
@@ -1088,9 +1088,9 @@ def samplePortrait (sample_matrices_path, output_path, project, percentage=False
 			# 	panel2.text(.265, .9, sample + ": " + "{:,}".format(int(total_count)) + " transcribed subs", fontsize=8, fontweight='bold', fontname='Arial', transform=plt.gcf().transFigure)
 
 			if percentage:
-				panel2.set_xlabel("Percentage of Single Base Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
+				panel2.set_xlabel("Percentage of Single Base \n Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
 			else:
-				panel2.set_xlabel("Number of Single Base Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
+				panel2.set_xlabel("Number of Single Base \n Substitutions", fontsize=10, fontname="Times New Roman", weight = 'bold')
 
 			panel2.tick_params(axis='both',which='both',\
 							   bottom=True, labelbottom=True,\
@@ -1214,9 +1214,9 @@ def samplePortrait (sample_matrices_path, output_path, project, percentage=False
 			panel4.grid(which='major', axis='y', color=[0.7,0.7,0.7], zorder=1)
 			panel4.legend(handles=[trans, untrans], prop={'size':4})
 			if percentage:
-				panel4.set_ylabel("Percentage of Single Base Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
+				panel4.set_ylabel("Percentage of Single Base \n Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
 			else:
-				panel4.set_ylabel("Number of Single Base Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
+				panel4.set_ylabel("Number of Single Base \n Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
 
 			panel4.tick_params(axis='both',which='both',\
 							   bottom=False, labelbottom=False,\
