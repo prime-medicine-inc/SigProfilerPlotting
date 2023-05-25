@@ -889,9 +889,9 @@ def samplePortrait (sample_matrices_path, output_path, project, percentage=False
 			panel3.set_xlabel('')
 
 			if percentage:
-				panel3.set_ylabel("Percentage of Single Base \n Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
+				panel3.set_ylabel("Percentage of Single Base Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
 			else:
-				panel3.set_ylabel("Number of Single Base \n Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
+				panel3.set_ylabel("Number of Single Base Substitutions", fontsize=6, fontname="Times New Roman", weight = 'bold')
 
 
 			panel3.tick_params(axis='both',which='both',\
