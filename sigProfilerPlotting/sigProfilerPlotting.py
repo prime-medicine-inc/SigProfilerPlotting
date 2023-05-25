@@ -61,18 +61,18 @@ def output_results(savefig_format, output_path, project, figs, context_type):
 	if savefig_format.lower() == "pdf":
 		pp = PdfPages(output_path + context_type +'_plots_'+ project +'.pdf')
 		for fig in figs:
-			figs[fig].savefig(pp, format='pdf')
+			figs[fig].savefig(pp, format='pdf', bbox_inches="tight")
 		pp.close()
 		clear_plotting_memory()
 	elif savefig_format.lower() == "png":
 		for fig in figs:
-			figs[fig].savefig(output_path + context_type +'_plots_'+fig+'.png',dpi=100)
+			figs[fig].savefig(output_path + context_type +'_plots_'+fig+'.png',dpi=100, bbox_inches="tight")
 		clear_plotting_memory()
 	elif savefig_format.lower() == "pil_image":
 		image_list = {}
 		for fig in figs:
 			tmp_buffer=io.BytesIO()
-			figs[fig].savefig(tmp_buffer,format='png')
+			figs[fig].savefig(tmp_buffer,format='png', bbox_inches="tight")
 			# convert tmp_buffer to a PIL and close buffer
 			tmp_buffer.seek(0)
 			tmp_image=Image.open(tmp_buffer)
@@ -1413,7 +1413,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 
 				[i.set_color("black") for i in plt.gca().get_yticklabels()]
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 				sample_count += 1
 			pp.close()
@@ -1680,7 +1680,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 
 				[i.set_color("black") for i in plt.gca().get_yticklabels()]
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 				sample_count += 1
 			pp.close()
@@ -1838,7 +1838,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 								   top=False, labeltop=False,\
 								   width=2)
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 			pp.close()
 
@@ -1997,7 +1997,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 
 				plt.legend(handles=[trans, untrans], prop={'size':25})
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 			pp.close()
 
@@ -2598,7 +2598,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 				else:
 					panel2.set_yticklabels(ylabels_96, fontsize=font_label_size, color='black')
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 				sample_count += 1
 			pp.close()
@@ -3270,7 +3270,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 				handles, labels = panel5.get_legend_handles_labels()
 				panel5.legend(handles[:3], labels[:3], loc='best', prop={'size':20})
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 				sample_count += 1
 			pp.close()
@@ -3776,7 +3776,7 @@ def plotSBS(matrix_path, output_path, project, plot_type, percentage=False,
 				panel2.set_xticks(xlabs)
 				handles, labels = panel2.get_legend_handles_labels()
 				panel2.legend(handles[:4], labels[:4], loc='upper right', prop={'size':15}, bbox_to_anchor= (0.95, 1.15))
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 				sample_count += 1
 
@@ -4171,7 +4171,7 @@ def plotID(matrix_path, output_path, project, plot_type, percentage=False, custo
 				[i.set_color("black") for i in plt.gca().get_yticklabels()]
 
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 			pp.close()
 
@@ -4524,7 +4524,7 @@ def plotID(matrix_path, output_path, project, plot_type, percentage=False, custo
 
 				[i.set_color("black") for i in plt.gca().get_yticklabels()]
 
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 				sample_count += 1
 			pp.close()
@@ -4913,7 +4913,7 @@ def plotDBS(matrix_path, output_path, project, plot_type, percentage=False, cust
 
 
 				panel1.set_xlim([0, 36])
-				pp.savefig(plot1)
+				pp.savefig(plot1, bbox_inches="tight")
 				plt.close()
 			pp.close()
 		except:
